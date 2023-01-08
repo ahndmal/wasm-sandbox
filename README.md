@@ -1,9 +1,10 @@
 # WASM sandbox
 
-Mainly use of .wat files.
+- use of .wat files as .wasm in browser
+- AssemblyScript
+- RUST, Go with native compilation
 
 docs:
-
 - https://webassembly.org/
 - https://developer.mozilla.org/en-US/docs/WebAssembly/Text_format_to_wasm.
 - https://anonyco.github.io/WasmFiddlePlusPlus/
