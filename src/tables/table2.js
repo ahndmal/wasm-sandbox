@@ -29,4 +29,3 @@ WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
     assertEq("getting wasm-updated value from JS", global.value, 43);
   }
 );
-

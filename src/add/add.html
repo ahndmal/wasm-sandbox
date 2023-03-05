@@ -6,12 +6,10 @@
   </head>
   <body>
     <script type="text/javascript">
-
       WebAssembly.instantiateStreaming(fetch("add.wasm")).then((obj) => {
-        let res = obj.instance.exports.add(1, 2);
+        let res = obj.instance.exports.add(1024, 200);
         console.log(res);
       });
-
     </script>
   </body>
 </html>
