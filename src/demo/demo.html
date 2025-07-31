@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo</title>
+  </head>
+  <body>
+    <script>
+      const importObj = {
+        js: {
+          import1: () => console.log("hello,"),
+          import2: () => console.log("world!")
+        }
+      };
+      fetch('demo.wasm').then(response =>
+              response.arrayBuffer()
+      ).then(buffer =>
+              WebAssembly.instantiate(buffer, importObj)
+      ).then(({module, instance}) =>
+              instance.exports.f()
+      );
+    </script>
+  </body>
+</html>
